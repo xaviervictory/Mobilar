@@ -425,22 +425,114 @@ transition: var(--transition);
 background-color: var(--color-secondary);
 }
 
-/*  OFERTAS  */
+/* ==================== OFERTAS ==================== */
 
 .offers-section {
-min-height: 400px;
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5rem 5%;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+}
 
 
-display: flex;
-align-items: center;
+.offer-content {
+    width: 90%;
+    max-width: 1200px;
 
-padding: var(--spacing-xl) 5%;
+    margin: 0 auto;
 
-background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-color: var(--color-white);
+    gap: 4rem;
+}
 
 
+.offer-text {
+    flex: 1;
+}
+
+
+.offer-text h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: var(--spacing-md);
+}
+
+
+.offer-text p:not(.section-subtitle) {
+    max-width: 600px;
+
+    margin-bottom: var(--spacing-lg);
+
+    color: #d1d5db;
+
+    font-size: 1.05rem;
+}
+
+
+/* OFERTA DESTACADA */
+
+.offer-highlight {
+    width: 280px;
+    height: 280px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-secondary);
+
+    border-radius: 50%;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+
+.offer-label {
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.offer-highlight strong {
+    font-size: 4.5rem;
+
+    line-height: 1;
+
+    margin: 0.5rem 0;
+}
+
+
+.offer-highlight > span:not(.offer-label) {
+    font-size: 1.5rem;
+
+    font-weight: 800;
+}
+
+
+.offer-highlight p {
+    margin-top: 0.5rem;
+
+    font-size: 0.9rem;
 }
 
 .offer-content {
@@ -485,6 +577,38 @@ margin-bottom: var(--spacing-md);
 }
 
 .about-text p:not(.section-subtitle) {
+    .about-stats {
+    display: flex;
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+
+    padding-top: 2rem;
+
+    border-top: 1px solid var(--color-border);
+}
+
+
+.stat {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.stat strong {
+    font-size: 1.8rem;
+
+    color: var(--color-secondary);
+}
+
+
+.stat span {
+    color: var(--color-text-light);
+
+    font-size: 0.85rem;
+}
 color: var(--color-text-light);
 margin-bottom: var(--spacing-sm);
 }
@@ -690,6 +814,11 @@ RESPONSIVE DESIGN
 
 @media (max-width: 900px) {
 
+        .about-stats {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
 
 .nav-links {
     gap: 0.8rem;
@@ -733,6 +862,27 @@ RESPONSIVE DESIGN
 
 @media (max-width: 650px) {
 
+        .about-stats {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+        .offer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .offer-highlight {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .offer-highlight strong {
+        font-size: 3.5rem;
+    }
 
 .navbar {
     flex-wrap: wrap;
@@ -814,6 +964,29 @@ RESPONSIVE DESIGN
 
 @media (max-width: 650px) {
 
+        .about-stats {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+        .offer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .offer-highlight {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .offer-highlight strong {
+        font-size: 3.5rem;
+    }
+
     .products-tools {
         flex-direction: column;
         align-items: stretch;
@@ -831,6 +1004,11 @@ RESPONSIVE DESIGN
 
 @media (max-width: 400px) {
 
+        .about-stats {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
 
 .navbar {
     width: 92%;
@@ -864,6 +1042,29 @@ RESPONSIVE DESIGN
 }
 
 @media (max-width: 650px) {
+
+        .about-stats {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+        .offer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .offer-highlight {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .offer-highlight strong {
+        font-size: 3.5rem;
+    }
 
     .products-tools {
         flex-direction: column;
