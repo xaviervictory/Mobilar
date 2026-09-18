@@ -1,4 +1,5 @@
 
+
 /*  VARIABLES  */
 
 :root {
@@ -77,6 +78,7 @@ top: 0;
 z-index: 1000;
 }
 
+/*
 .navbar {
 width: 90%;
 max-width: 1200px;
@@ -91,6 +93,7 @@ gap: var(--spacing-md);
 
 
 }
+*/
 
 .logo {
 font-size: 1.5rem;
@@ -126,6 +129,7 @@ transition: var(--transition);
 .cart:hover {
 background-color: var(--color-secondary);
 }
+
 
 /*  HERO  */
 
@@ -884,12 +888,14 @@ RESPONSIVE DESIGN
         font-size: 3.5rem;
     }
 
+    /*
 .navbar {
     flex-wrap: wrap;
     padding: 1rem 0;
 }
+*/
 
-
+/*
 .nav-links {
     order: 3;
 
@@ -900,8 +906,9 @@ RESPONSIVE DESIGN
     flex-wrap: wrap;
 
     gap: 0.8rem;
-}
 
+}
+*/
 
 .hero {
     flex-direction: column;
@@ -1010,10 +1017,11 @@ RESPONSIVE DESIGN
         flex-wrap: wrap;
     }
 
+    /*
 .navbar {
     width: 92%;
 }
-
+*/
 
 .nav-links {
     font-size: 0.8rem;
@@ -1148,4 +1156,49 @@ RESPONSIVE DESIGN
 
 .filter-box {
     min-width: 220px;
+}
+
+/* TP3 - PERSONALIZACIÓN BOOTSTRAP */
+
+.navbar {
+    box-shadow: var(--shadow);
+}
+
+
+.navbar-brand {
+    letter-spacing: 2px;
+
+    color: var(--color-secondary) !important;
+}
+
+
+.navbar-brand:hover {
+    color: #f59e0b !important;
+}
+
+
+.navbar .nav-link {
+    transition: var(--transition);
+}
+
+
+.navbar .nav-link:hover {
+    color: var(--color-secondary);
+}
+
+
+.navbar .btn-warning {
+    font-weight: 700;
+
+    border: none;
+
+    transition: var(--transition);
+}
+
+
+.navbar .btn-warning:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
 }
