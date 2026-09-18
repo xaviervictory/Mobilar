@@ -812,6 +812,18 @@ RESPONSIVE DESIGN
     grid-template-columns: 1fr;
 }
 
+@media (max-width: 650px) {
+
+    .products-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-box {
+        min-width: 100%;
+    }
+
+}
 
 }
 
@@ -851,4 +863,88 @@ RESPONSIVE DESIGN
     text-align: center;
 }
 
+@media (max-width: 650px) {
+
+    .products-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-box {
+        min-width: 100%;
+    }
+
+}
+
+}
+
+/*  PRODUCT TOOLS  */
+
+.products-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.search-box,
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.search-box {
+    flex: 1;
+}
+
+
+.search-box label,
+.filter-box label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+.search-box input,
+.filter-box select {
+    padding: 0.9rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    background-color: var(--color-white);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: var(--transition);
+}
+
+
+.search-box input:focus,
+.filter-box select:focus {
+    border-color: var(--color-secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+
+.filter-box {
+    min-width: 220px;
 }
