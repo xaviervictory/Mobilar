@@ -1,6 +1,6 @@
 # MOBILAR
 
-## 🛋️ Sobre el proyecto
+##  Sobre el proyecto
 
 Mobilar es un proyecto web orientado a la venta de muebles, productos para el hogar, oficina y tecnología.
 
@@ -8,13 +8,13 @@ El objetivo es desarrollar una tienda online moderna, responsive e intuitiva, ap
 
 ---
 
-## 👥 Integrante
+##  Integrante
 
 * Xavier Dantur
 
 ---
 
-## 🛠️ Tecnologías
+##  Tecnologías
 
 * HTML5
 * CSS3
@@ -25,8 +25,6 @@ El objetivo es desarrollar una tienda online moderna, responsive e intuitiva, ap
 * Netlify
 
 ---
-
-# 📚 Trabajos Prácticos
 
 ## TP1 — Estructura HTML
 
@@ -63,17 +61,6 @@ Se definieron variables para:
 * Sombras.
 * Transiciones.
 
-Ejemplo:
-
-```css
-:root {
-    --color-primary: #111827;
-    --color-secondary: #d97706;
-    --color-white: #ffffff;
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
-}
-```
 
 ---
 
@@ -92,64 +79,6 @@ Principalmente:
 
 Ejemplo:
 
-```css
-.offer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-```
-
----
-
-### CSS Grid
-
-CSS Grid se utilizó principalmente para organizar el catálogo de productos y el footer.
-
-Ejemplo:
-
-```css
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-```
-
----
-
-### Box Model
-
-Se aplicó el modelo de caja mediante:
-
-* `margin`
-* `padding`
-* `border`
-* `box-sizing`
-
-Se estableció:
-
-```css
-* {
-    box-sizing: border-box;
-}
-```
-
----
-
-### Unidades utilizadas
-
-El proyecto utiliza diferentes unidades de medida:
-
-* `px`
-* `%`
-* `rem`
-* `vh`
-* `vw`
-* `fr`
-
-También se utilizaron funciones CSS como `clamp()` para adaptar algunos tamaños de forma responsive.
-
 ---
 
 ### Responsive Design
@@ -166,7 +95,7 @@ El catálogo de productos modifica la cantidad de columnas según el ancho dispo
 
 ---
 
-# 🚀 TP3 — Bootstrap
+#  TP3 — Bootstrap
 
 En el tercer trabajo práctico se realizará una refactorización del proyecto utilizando Bootstrap.
 
@@ -185,7 +114,7 @@ Finalmente, el proyecto será publicado utilizando Netlify.
 
 ---
 
-# ⚡ TP4 — JavaScript y DOM
+#  TP4 — JavaScript y DOM
 
 En el cuarto trabajo práctico se incorporarán funcionalidades mediante JavaScript y manipulación del DOM.
 
@@ -202,9 +131,17 @@ Entre las funcionalidades previstas:
 
 ---
 
-## 🌐 Deploy
+##  Deploy
 
 El proyecto será publicado mediante Netlify.
 
 ---
+
+El proyecto utiliza una estructura de ramas para organizar el desarrollo.
+
+main
+
+dev/* feature/* refactor/*
+
+Las funcionalidades y refactorizaciones se desarrollan en ramas independientes y posteriormente se integran mediante PR
 

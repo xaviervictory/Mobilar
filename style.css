@@ -1366,3 +1366,23 @@ RESPONSIVE DESIGN
 #footer hr {
     opacity: 0.25;
 }
+
+/*  TP4 - FILTROS DE PRODUCTOS */
+
+
+.filtro-categoria {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.filtro-categoria:hover {
+    transform: translateY(-2px);
+}
+
+
+.filtro-categoria.activo {
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}

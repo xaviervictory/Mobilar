@@ -148,13 +148,25 @@
 
         <!-- Carrito -->
 
-        <a
-            href="#carrito"
-            class="btn btn-warning ms-lg-3"
-        >
-            🛒 Carrito
-        </a>
+        <li class="nav-item">
 
+    <button
+        type="button"
+        class="btn btn-warning ms-lg-3"
+        id="boton-carrito"
+    >
+        🛒 Carrito
+        <span
+            id="contador-carrito"
+            class="badge text-bg-dark"
+        >
+             0
+        </span>
+    </button>
+
+</li>
+
+        
     </div>
 
 </div>
@@ -413,51 +425,87 @@
 
     <!-- Categorías -->
 
-    <div
-        class="d-flex flex-wrap justify-content-center gap-2 mb-5"
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+
+    <button
+        type="button"
+        class="btn btn-dark filtro-categoria activo"
+        data-categoria="todos"
     >
+        Todos
+    </button>
 
-        <button
-            type="button"
-            class="btn btn-dark"
-            data-categoria="todos"
-        >
-            Todos
-        </button>
+    <button
+        type="button"
+        class="btn btn-outline-dark filtro-categoria"
+        data-categoria="muebles"
+    >
+        🪑 Muebles
+    </button>
 
+    <button
+        type="button"
+        class="btn btn-outline-dark filtro-categoria"
+        data-categoria="computacion"
+    >
+        💻 Computación
+    </button>
 
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            data-categoria="muebles"
-        >
-            🪑 Muebles
-        </button>
+    <button
+        type="button"
+        class="btn btn-outline-dark filtro-categoria"
+        data-categoria="hogar"
+    >
+        🏠 Hogar
+    </button>
 
-
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            data-categoria="computacion"
-        >
-            💻 Computación
-        </button>
-
-
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            data-categoria="hogar"
-        >
-            🏠 Hogar
-        </button>
-
-    </div>
+</div>
 
 
     <!-- Productos -->
 
     <div class="row g-4">
+
+        <!-- Buscador -->
+
+<div class="row justify-content-center mb-4">
+
+
+<div class="col-12 col-md-8 col-lg-6">
+
+    <label
+        for="buscador-productos"
+        class="form-label fw-semibold"
+    >
+        Buscar productos
+    </label>
+
+    <div class="input-group">
+
+        <span class="input-group-text">
+            🔎
+        </span>
+
+        <input
+            type="search"
+            class="form-control"
+            id="buscador-productos"
+            placeholder="Buscar por nombre..."
+            autocomplete="off"
+        >
+<p
+    id="sin-resultados"
+    class="text-center text-secondary d-none mt-4"
+>
+    -- No encontramos productos que coincidan con tu búsqueda. --
+</p>
+
+    </div>
+
+</div>
+
+
+</div>
 
 
         <!-- Producto 1 -->
@@ -465,6 +513,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="muebles"
+            data-nombre="Silla Ergonómica"
+            data-precio="85000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -508,11 +558,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                         type="button"
+                         class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -528,6 +578,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="muebles"
+            data-nombre="Escritorio Moderno"
+            data-precio="150000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -571,11 +623,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                         type="button"
+                         class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -591,6 +643,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="computacion"
+            data-nombre="Monitor 24 pulgadas"
+            data-precio="220000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -634,11 +688,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+    type="button"
+    class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -654,6 +708,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="computacion"
+            data-nombre="Teclado Mecánico"
+            data-precio="45000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -696,12 +752,12 @@
                         </p>
 
 
-                        <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                      <button
+                       type="button"
+                       class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -717,6 +773,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="hogar"
+            data-nombre="Lámpara Minimalista"
+            data-precio="35000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -760,11 +818,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                        type="button"
+                        class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -780,6 +838,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="hogar"
+            data-nombre="Organizador Modular"
+            data-precio="60000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -824,9 +884,9 @@
 
                         <button
                             type="button"
-                            class="btn btn-warning w-100"
+                            class="btn btn-warning agregar-carrito"
                         >
-                            Agregar al carrito
+                            🛒 Agregar al carrito
                         </button>
 
                     </div>
@@ -1398,6 +1458,8 @@
                     >
                         Contacto
                     </a>
+
+    
                 </li>
 
             </ul>
@@ -1466,7 +1528,7 @@
                 </li>
 
                 <li>
-                    📱 +54 381 000-0000
+                    📱 +54 381 452-8080
                 </li>
 
             </ul>
@@ -1520,11 +1582,95 @@
 
 </footer>
 
+<!-- CARRITO -->
+
+<div
+    class="modal fade"
+    id="modal-carrito"
+    tabindex="-1"
+    aria-labelledby="titulo-carrito"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <h2
+                    class="modal-title h5"
+                    id="titulo-carrito"
+                >
+                    🛒 Mi carrito
+                </h2>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div id="lista-carrito">
+
+                    <p
+                        id="carrito-vacio"
+                        class="text-center text-secondary"
+                    >
+                        Tu carrito está vacío.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer flex-column align-items-stretch">
+
+                <div
+                    class="d-flex justify-content-between fw-bold mb-3"
+                >
+
+                    <span>
+                        Total:
+                    </span>
+
+                    <span id="total-carrito">
+                        $0
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-warning"
+                    id="finalizar-compra"
+                >
+                    Finalizar compra
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
+
+<script src="script.js"></script>
 
 </body>
 </html>
