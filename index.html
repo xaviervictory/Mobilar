@@ -973,82 +973,318 @@
 
     <!--  CONTACTO  -->
 
-    <section id="contacto" class="section contact-section">
+    <section
+    id="contacto"
+    class="py-5"
+>
 
-        <div class="section-header">
+<div class="container">
 
-            <p class="section-subtitle">
-                CONTACTANOS
-            </p>
+    <!-- Encabezado -->
 
-            <h2>
-                ¿Tenés alguna consulta?
-            </h2>
+    <div class="text-center mb-5">
 
-            <p>
-                Escribinos y te ayudaremos a encontrar lo que necesitás.
-            </p>
+        <span class="badge text-bg-warning mb-2">
+            CONTACTO
+        </span>
+
+        <h2 class="display-6 fw-bold">
+            ¿Tenés alguna consulta?
+        </h2>
+
+        <p class="text-secondary mx-auto contacto-descripcion">
+            Estamos para ayudarte. Completá el formulario
+            y nos pondremos en contacto con vos.
+        </p>
+
+    </div>
+
+
+    <div class="row g-5 align-items-start">
+
+
+        <!-- Información de contacto -->
+
+        <div class="col-12 col-lg-5">
+
+            <div class="contacto-info">
+
+                <h3 class="h4 fw-bold mb-4">
+                    Hablemos
+                </h3>
+
+                <p class="text-secondary mb-4">
+                    Si tenés dudas sobre nuestros productos,
+                    precios, disponibilidad o envíos,
+                    podés comunicarte con nosotros.
+                </p>
+
+
+                <!-- Ubicación -->
+
+                <div class="d-flex gap-3 mb-4">
+
+                    <div class="contacto-icono">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h4 class="h6 fw-bold mb-1">
+                            Ubicación
+                        </h4>
+
+                        <p class="text-secondary mb-0">
+                            Tucumán, Argentina
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="d-flex gap-3 mb-4">
+
+                    <div class="contacto-icono">
+                        📧
+                    </div>
+
+                    <div>
+
+                        <h4 class="h6 fw-bold mb-1">
+                            Email
+                        </h4>
+
+                        <p class="text-secondary mb-0">
+                            mobilar@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Teléfono -->
+
+                <div class="d-flex gap-3 mb-4">
+
+                    <div class="contacto-icono">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <h4 class="h6 fw-bold mb-1">
+                            Teléfono
+                        </h4>
+
+                        <p class="text-secondary mb-0">
+                            +54 381 452-8080
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Horarios -->
+
+                <div class="d-flex gap-3">
+
+                    <div class="contacto-icono">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <h4 class="h6 fw-bold mb-1">
+                            Horarios
+                        </h4>
+
+                        <p class="text-secondary mb-0">
+                            Lunes a viernes
+                        </p>
+
+                        <p class="text-secondary mb-0">
+                            07:00 - 21:00 hs
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
 
-        <form class="contact-form">
+        <!-- Formulario -->
 
-            <div class="form-group">
+        <div class="col-12 col-lg-7">
 
-                <label for="nombre">
-                    Nombre
-                </label>
+            <div class="card border-0 shadow-sm contacto-card">
 
-                <input 
-                    type="text" 
-                    id="nombre" 
-                    name="nombre"
-                    placeholder="Tu nombre"
-                >
+                <div class="card-body p-4 p-md-5">
+
+                    <form id="form-contacto">
+
+
+                        <!-- Nombre -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="nombre"
+                                class="form-label fw-semibold"
+                            >
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ingresá tu nombre"
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="email"
+                                class="form-label fw-semibold"
+                            >
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="ejemplo@email.com"
+                            >
+
+                        </div>
+
+
+                        <!-- Teléfono -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="telefono"
+                                class="form-label fw-semibold"
+                            >
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="381 000-0000"
+                            >
+
+                        </div>
+
+
+                        <!-- Asunto -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="asunto"
+                                class="form-label fw-semibold"
+                            >
+                                Asunto
+                            </label>
+
+                            <select
+                                class="form-select"
+                                id="asunto"
+                                name="asunto"
+                            >
+
+                                <option selected disabled>
+                                    Seleccioná una opción
+                                </option>
+
+                                <option value="producto">
+                                    Consulta sobre un producto
+                                </option>
+
+                                <option value="precio">
+                                    Consulta sobre precios
+                                </option>
+
+                                <option value="envio">
+                                    Consulta sobre envíos
+                                </option>
+
+                                <option value="otro">
+                                    Otra consulta
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Mensaje -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="mensaje"
+                                class="form-label fw-semibold"
+                            >
+                                Mensaje
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                id="mensaje"
+                                name="mensaje"
+                                rows="5"
+                                placeholder="Escribí tu consulta..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Botón -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-warning w-100 py-2 fw-bold"
+                        >
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+                </div>
 
             </div>
 
+        </div>
 
-            <div class="form-group">
+    </div>
 
-                <label for="email">
-                    Email
-                </label>
-
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email"
-                    placeholder="tu@email.com"
-                >
-
-            </div>
+</div>
 
 
-            <div class="form-group">
+</section>
 
-                <label for="mensaje">
-                    Mensaje
-                </label>
-
-                <textarea 
-                    id="mensaje" 
-                    name="mensaje"
-                    rows="5"
-                    placeholder="Escribí tu consulta..."
-                ></textarea>
-
-            </div>
-
-
-            <button type="submit" class="btn">
-                Enviar mensaje
-            </button>
-
-        </form>
-
-    </section>
 
 
     <!--  CARRITO  -->
