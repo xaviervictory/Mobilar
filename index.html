@@ -9,6 +9,10 @@
 <meta name="description" content="Mobilar - Muebles, tecnología y productos para tu hogar y espacio de trabajo.">
 <meta name="keywords" content="muebles, escritorios, sillas, tecnología, computación, Mobilar">
 <meta name="author" content="Equipo Mobilar">
+ <meta
+        name="robots"
+        content="index, follow"
+    >
 
 <title>Mobilar | Muebles y Tecnología</title>
 
@@ -148,13 +152,26 @@
 
         <!-- Carrito -->
 
-        <a
-            href="#carrito"
-            class="btn btn-warning ms-lg-3"
-        >
-            🛒 Carrito
-        </a>
+        <li class="nav-item">
 
+    <button
+    type="button"
+    class="btn btn-warning ms-lg-3"
+    id="boton-carrito"
+    aria-label="Abrir carrito de compras"
+>
+    🛒 Carrito
+
+    <span
+        id="contador-carrito"
+        class="badge text-bg-dark"
+    >
+        0
+    </span>
+
+</button>
+
+        
     </div>
 
 </div>
@@ -413,51 +430,87 @@
 
     <!-- Categorías -->
 
-    <div
-        class="d-flex flex-wrap justify-content-center gap-2 mb-5"
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+
+    <button
+        type="button"
+        class="btn btn-dark filtro-categoria activo"
+        data-categoria="todos"
     >
+        Todos
+    </button>
 
-        <button
-            type="button"
-            class="btn btn-dark"
-            data-categoria="todos"
-        >
-            Todos
-        </button>
+    <button
+        type="button"
+        class="btn btn-outline-dark filtro-categoria"
+        data-categoria="muebles"
+    >
+        🪑 Muebles
+    </button>
 
+    <button
+        type="button"
+        class="btn btn-outline-dark filtro-categoria"
+        data-categoria="computacion"
+    >
+        💻 Computación
+    </button>
 
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            data-categoria="muebles"
-        >
-            🪑 Muebles
-        </button>
+    <button
+        type="button"
+        class="btn btn-outline-dark filtro-categoria"
+        data-categoria="hogar"
+    >
+        🏠 Hogar
+    </button>
 
-
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            data-categoria="computacion"
-        >
-            💻 Computación
-        </button>
-
-
-        <button
-            type="button"
-            class="btn btn-outline-dark"
-            data-categoria="hogar"
-        >
-            🏠 Hogar
-        </button>
-
-    </div>
+</div>
 
 
     <!-- Productos -->
 
     <div class="row g-4">
+
+        <!-- Buscador -->
+
+<div class="row justify-content-center mb-4">
+
+
+<div class="col-12 col-md-8 col-lg-6">
+
+    <label
+        for="buscador-productos"
+         class="form-label"
+    >
+        Buscar productos
+    </label>
+
+    <div class="input-group">
+
+        <span class="input-group-text">
+            🔎
+        </span>
+
+        <input
+    type="search"
+    id="buscador-productos"
+    class="form-control"
+    placeholder="¿Qué estás buscando?"
+    aria-label="Buscar productos"
+>
+<p
+    id="sin-resultados"
+    class="text-center text-secondary d-none mt-4"
+>
+    -- No encontramos productos que coincidan con tu búsqueda. --
+</p>
+
+    </div>
+
+</div>
+
+
+</div>
 
 
         <!-- Producto 1 -->
@@ -465,6 +518,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="muebles"
+            data-nombre="Silla Ergonómica"
+            data-precio="85000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -473,9 +528,11 @@
                     class="producto-imagen d-flex align-items-center justify-content-center"
                 >
 
-                    <span aria-hidden="true">
-                        🪑
-                    </span>
+                    <img
+            src="img/muebles/oficina/sillaergonomica.jpg"
+            class="card-img-top"
+            alt="Escritorio moderno para computadora"
+        >
 
                 </div>
 
@@ -508,11 +565,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                         type="button"
+                         class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -528,6 +585,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="muebles"
+            data-nombre="Escritorio Moderno"
+            data-precio="150000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -536,9 +595,11 @@
                     class="producto-imagen d-flex align-items-center justify-content-center"
                 >
 
-                    <span aria-hidden="true">
-                        🖥️
-                    </span>
+                    <img
+            src="img/muebles/escritoriomoderno.jpg"
+            class="card-img-top"
+            alt="Escritorio moderno para computadora"
+        >
 
                 </div>
 
@@ -571,11 +632,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                         type="button"
+                         class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -591,6 +652,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="computacion"
+            data-nombre="Monitor 24 pulgadas"
+            data-precio="220000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -599,9 +662,11 @@
                     class="producto-imagen d-flex align-items-center justify-content-center"
                 >
 
-                    <span aria-hidden="true">
-                        🖥️
-                    </span>
+                    <img
+            src="img/muebles/oficina/tecnología/monitor24.jpg"
+            class="card-img-top"
+            alt="Escritorio moderno para computadora"
+        >
 
                 </div>
 
@@ -634,11 +699,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+    type="button"
+    class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -649,11 +714,11 @@
         </article>
 
 
-        <!-- Producto 4 -->
-
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="computacion"
+            data-nombre="Teclado Mecánico"
+            data-precio="45000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -662,9 +727,11 @@
                     class="producto-imagen d-flex align-items-center justify-content-center"
                 >
 
-                    <span aria-hidden="true">
-                        ⌨️
-                    </span>
+                    <img
+            src="img/muebles/oficina/tecnología/tecladomecanico.jpg"
+            class="card-img-top"
+            alt="Teclado mecánico"
+        >
 
                 </div>
 
@@ -684,8 +751,8 @@
 
 
                     <p class="card-text text-secondary">
-                        Teclado mecánico compacto con iluminación
-                        y diseño pensado para gaming.
+                        Teclado mecánico con switches de alta calidad para una experiencia de escritura superior, ideal para gaming y productividad.
+                        estudio y entretenimiento.
                     </p>
 
 
@@ -697,11 +764,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+    type="button"
+    class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -717,6 +784,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="hogar"
+            data-nombre="Lámpara Minimalista"
+            data-precio="35000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -725,9 +794,11 @@
                     class="producto-imagen d-flex align-items-center justify-content-center"
                 >
 
-                    <span aria-hidden="true">
-                        💡
-                    </span>
+                     <img
+            src="img/muebles/oficina/lamparaminimalista.jpg"
+            class="card-img-top"
+            alt="Escritorio moderno para computadora"
+        >
 
                 </div>
 
@@ -760,11 +831,11 @@
 
 
                         <button
-                            type="button"
-                            class="btn btn-warning w-100"
-                        >
-                            Agregar al carrito
-                        </button>
+                        type="button"
+                        class="btn btn-warning agregar-carrito"
+>
+    🛒 Agregar al carrito
+</button>
 
                     </div>
 
@@ -780,6 +851,8 @@
         <article
             class="col-12 col-sm-6 col-lg-4 producto"
             data-categoria="hogar"
+            data-nombre="Organizador Modular"
+            data-precio="60000"
         >
 
             <div class="card h-100 shadow-sm">
@@ -788,9 +861,11 @@
                     class="producto-imagen d-flex align-items-center justify-content-center"
                 >
 
-                    <span aria-hidden="true">
-                        🗄️
-                    </span>
+                    <img
+            src="img/muebles/organizadormodular.jpg"
+            class="card-img-top"
+            alt="Escritorio moderno para computadora"
+        >
 
                 </div>
 
@@ -824,9 +899,9 @@
 
                         <button
                             type="button"
-                            class="btn btn-warning w-100"
+                            class="btn btn-warning agregar-carrito"
                         >
-                            Agregar al carrito
+                            🛒 Agregar al carrito
                         </button>
 
                     </div>
@@ -971,317 +1046,192 @@
 
 
 
-    <!--  CONTACTO  -->
+    <section id="contacto" class="py-5">
 
-    <section
-    id="contacto"
-    class="py-5"
->
+    <div class="container">
 
-<div class="container">
+        <div class="text-center mb-5">
 
-    <!-- Encabezado -->
+            <h2 class="fw-bold">
+                Contactate con nosotros
+            </h2>
 
-    <div class="text-center mb-5">
-
-        <span class="badge text-bg-warning mb-2">
-            CONTACTO
-        </span>
-
-        <h2 class="display-6 fw-bold">
-            ¿Tenés alguna consulta?
-        </h2>
-
-        <p class="text-secondary mx-auto contacto-descripcion">
-            Estamos para ayudarte. Completá el formulario
-            y nos pondremos en contacto con vos.
-        </p>
-
-    </div>
-
-
-    <div class="row g-5 align-items-start">
-
-
-        <!-- Información de contacto -->
-
-        <div class="col-12 col-lg-5">
-
-            <div class="contacto-info">
-
-                <h3 class="h4 fw-bold mb-4">
-                    Hablemos
-                </h3>
-
-                <p class="text-secondary mb-4">
-                    Si tenés dudas sobre nuestros productos,
-                    precios, disponibilidad o envíos,
-                    podés comunicarte con nosotros.
-                </p>
-
-
-                <!-- Ubicación -->
-
-                <div class="d-flex gap-3 mb-4">
-
-                    <div class="contacto-icono">
-                        📍
-                    </div>
-
-                    <div>
-
-                        <h4 class="h6 fw-bold mb-1">
-                            Ubicación
-                        </h4>
-
-                        <p class="text-secondary mb-0">
-                            Tucumán, Argentina
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Email -->
-
-                <div class="d-flex gap-3 mb-4">
-
-                    <div class="contacto-icono">
-                        📧
-                    </div>
-
-                    <div>
-
-                        <h4 class="h6 fw-bold mb-1">
-                            Email
-                        </h4>
-
-                        <p class="text-secondary mb-0">
-                            mobilar@gmail.com
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Teléfono -->
-
-                <div class="d-flex gap-3 mb-4">
-
-                    <div class="contacto-icono">
-                        📱
-                    </div>
-
-                    <div>
-
-                        <h4 class="h6 fw-bold mb-1">
-                            Teléfono
-                        </h4>
-
-                        <p class="text-secondary mb-0">
-                            +54 381 452-8080
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Horarios -->
-
-                <div class="d-flex gap-3">
-
-                    <div class="contacto-icono">
-                        🕐
-                    </div>
-
-                    <div>
-
-                        <h4 class="h6 fw-bold mb-1">
-                            Horarios
-                        </h4>
-
-                        <p class="text-secondary mb-0">
-                            Lunes a viernes
-                        </p>
-
-                        <p class="text-secondary mb-0">
-                            07:00 - 21:00 hs
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <p class="text-secondary">
+                ¿Tenés alguna consulta? Escribinos y te responderemos.
+            </p>
 
         </div>
 
 
-        <!-- Formulario -->
+        <div class="row justify-content-center">
 
-        <div class="col-12 col-lg-7">
+            <div class="col-12 col-md-8 col-lg-6">
 
-            <div class="card border-0 shadow-sm contacto-card">
+                <form id="formulario-contacto" novalidate>
 
-                <div class="card-body p-4 p-md-5">
+                    <!-- Nombre -->
 
-                    <form id="form-contacto">
+                    <div class="mb-3">
 
+                        <label
+                            for="nombre"
+                            class="form-label"
+                        >
+                            Nombre completo
+                        </label>
 
-                        <!-- Nombre -->
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            placeholder="Ingresá tu nombre"
+                        >
 
-                        <div class="mb-3">
+                        <div
+                            id="error-nombre"
+                            class="text-danger small mt-1"
+                        ></div>
 
-                            <label
-                                for="nombre"
-                                class="form-label fw-semibold"
-                            >
-                                Nombre
-                            </label>
-
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="nombre"
-                                name="nombre"
-                                placeholder="Ingresá tu nombre"
-                            >
-
-                        </div>
-
-
-                        <!-- Email -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="email"
-                                class="form-label fw-semibold"
-                            >
-                                Email
-                            </label>
-
-                            <input
-                                type="email"
-                                class="form-control"
-                                id="email"
-                                name="email"
-                                placeholder="ejemplo@email.com"
-                            >
-
-                        </div>
+                    </div>
 
 
-                        <!-- Teléfono -->
+                    <!-- Email -->
 
-                        <div class="mb-3">
+                    <div class="mb-3">
 
-                            <label
-                                for="telefono"
-                                class="form-label fw-semibold"
-                            >
-                                Teléfono
-                            </label>
+                        <label
+                            for="email"
+                            class="form-label"
+                        >
+                            Correo electrónico
+                        </label>
 
-                            <input
-                                type="tel"
-                                class="form-control"
-                                id="telefono"
-                                name="telefono"
-                                placeholder="381 000-0000"
-                            >
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="ejemplo@gmail.com"
+                        >
 
-                        </div>
+                        <div
+                            id="error-email"
+                            class="text-danger small mt-1"
+                        ></div>
 
-
-                        <!-- Asunto -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="asunto"
-                                class="form-label fw-semibold"
-                            >
-                                Asunto
-                            </label>
-
-                            <select
-                                class="form-select"
-                                id="asunto"
-                                name="asunto"
-                            >
-
-                                <option selected disabled>
-                                    Seleccioná una opción
-                                </option>
-
-                                <option value="producto">
-                                    Consulta sobre un producto
-                                </option>
-
-                                <option value="precio">
-                                    Consulta sobre precios
-                                </option>
-
-                                <option value="envio">
-                                    Consulta sobre envíos
-                                </option>
-
-                                <option value="otro">
-                                    Otra consulta
-                                </option>
-
-                            </select>
-
-                        </div>
+                    </div>
 
 
-                        <!-- Mensaje -->
+                    <!-- Asunto -->
 
-                        <div class="mb-4">
+                    <div class="mb-3">
 
-                            <label
-                                for="mensaje"
-                                class="form-label fw-semibold"
-                            >
-                                Mensaje
-                            </label>
+                        <label
+                            for="asunto"
+                            class="form-label"
+                        >
+                            Asunto
+                        </label>
 
-                            <textarea
-                                class="form-control"
-                                id="mensaje"
-                                name="mensaje"
-                                rows="5"
-                                placeholder="Escribí tu consulta..."
-                            ></textarea>
+                        <select
+                            class="form-select"
+                            id="asunto"
+                        >
 
-                        </div>
+                            <option value="">
+                                Seleccioná un asunto
+                            </option>
+
+                            <option value="consulta">
+                                Consulta sobre productos
+                            </option>
+
+                            <option value="pedido">
+                                Consulta sobre un pedido
+                            </option>
+
+                            <option value="soporte">
+                                Soporte
+                            </option>
+
+                            <option value="otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                        <div
+                            id="error-asunto"
+                            class="text-danger small mt-1"
+                        ></div>
+
+                    </div>
 
 
-                        <!-- Botón -->
+                    <!-- Mensaje -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="mensaje"
+                            class="form-label"
+                        >
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="mensaje"
+                            rows="5"
+                            placeholder="Escribí tu mensaje..."
+                        ></textarea>
+
+                        <div
+                         class="text-end text-secondary small mt-1"
+                         id="contador-caracteres"
+>
+    0 / 500
+</div>
+
+                        <div
+                            id="error-mensaje"
+                            class="text-danger small mt-1"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Botón -->
+
+                    <div class="d-grid">
 
                         <button
                             type="submit"
-                            class="btn btn-warning w-100 py-2 fw-bold"
+                            class="btn btn-warning"
                         >
                             Enviar mensaje
                         </button>
 
-                    </form>
+                    </div>
 
-                </div>
+
+                    <!-- Mensaje de éxito -->
+
+                    <div
+                        id="mensaje-exito"
+                        class="alert alert-success mt-4 d-none"
+                        role="alert"
+                    >
+                        ✅ ¡Mensaje enviado correctamente!
+                        Gracias por comunicarte con Mobilar.
+                    </div>
+
+                </form>
 
             </div>
 
         </div>
 
     </div>
-
-</div>
-
 
 </section>
 
@@ -1398,6 +1348,8 @@
                     >
                         Contacto
                     </a>
+
+    
                 </li>
 
             </ul>
@@ -1466,7 +1418,7 @@
                 </li>
 
                 <li>
-                    📱 +54 381 000-0000
+                    📱 +54 381 452-8080
                 </li>
 
             </ul>
@@ -1520,11 +1472,95 @@
 
 </footer>
 
+<!-- CARRITO -->
+
+<div
+    class="modal fade"
+    id="modal-carrito"
+    tabindex="-1"
+    aria-labelledby="titulo-carrito"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <h2
+                    class="modal-title h5"
+                    id="titulo-carrito"
+                >
+                    🛒 Mi carrito
+                </h2>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div id="lista-carrito">
+
+                    <p
+                        id="carrito-vacio"
+                        class="text-center text-secondary"
+                    >
+                        Tu carrito está vacío.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer flex-column align-items-stretch">
+
+                <div
+                    class="d-flex justify-content-between fw-bold mb-3"
+                >
+
+                    <span>
+                        Total:
+                    </span>
+
+                    <span id="total-carrito">
+                        $0
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-warning"
+                    id="finalizar-compra"
+                >
+                    Finalizar compra
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
+
+<script src="script.js"></script>
 
 </body>
 </html>
