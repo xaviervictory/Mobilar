@@ -1249,3 +1249,94 @@ RESPONSIVE DESIGN
 .producto .btn-warning {
     font-weight: 700;
 }
+
+/* TP3 - CONTACTO */
+
+
+.contacto-descripcion {
+    max-width: 650px;
+}
+
+
+.contacto-card {
+    border-radius: 1rem;
+}
+
+
+.contacto-info {
+    padding: 1rem;
+}
+
+
+.contacto-icono {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.75rem;
+
+    background-color: var(--color-secondary);
+
+    font-size: 1.25rem;
+}
+
+
+#form-contacto .form-control,
+#form-contacto .form-select {
+    border-radius: 0.6rem;
+
+    padding: 0.75rem;
+
+    border: 1px solid #dee2e6;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#form-contacto .form-control:focus,
+#form-contacto .form-select:focus {
+
+    border-color: var(--color-secondary);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(245, 158, 11, 0.2);
+}
+
+
+#form-contacto textarea {
+    resize: vertical;
+}
+
+
+#form-contacto .btn-warning {
+    border-radius: 0.6rem;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#form-contacto .btn-warning:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+@media (max-width: 767.98px) {
+
+    .contacto-info {
+        padding: 0;
+    }
+
+}
