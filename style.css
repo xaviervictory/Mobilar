@@ -1340,3 +1340,29 @@ RESPONSIVE DESIGN
     }
 
 }
+
+/* TP3 - FOOTER */
+
+
+#footer {
+    margin-top: 0;
+}
+
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+
+.footer-link:hover {
+    color: var(--color-secondary);
+}
+
+
+#footer hr {
+    opacity: 0.25;
+}
