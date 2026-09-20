@@ -383,315 +383,466 @@
 
     <!--  PRODUCTOS  -->
 
-    <section id="productos" class="section products-section">
+    <section
+    id="productos"
+    class="py-5 bg-light"
+>
 
-        <div class="section-header">
 
-            <p class="section-subtitle">
-                PRODUCTOS DESTACADOS
-            </p>
+<div class="container">
 
-            <h2>
-                Elegidos para vos
-            </h2>
+    <!-- Título -->
 
-            <p>
-                Conocé algunos de nuestros productos destacados.
-            </p>
+    <div class="text-center mb-5">
 
-        </div>
+        <span class="badge text-bg-warning mb-2">
+            MOBILAR
+        </span>
 
-        <div class="products-tools">
+        <h2 class="display-6 fw-bold">
+            Nuestros productos
+        </h2>
 
-    <div class="search-box">
-
-        <label for="search">
-            Buscar productos
-        </label>
-
-        <input
-            type="search"
-            id="search"
-            placeholder="¿Qué estás buscando?"
-        >
+        <p class="text-secondary mx-auto productos-descripcion">
+            Encontrá muebles, tecnología y accesorios
+            para crear espacios modernos y funcionales.
+        </p>
 
     </div>
 
 
-    <div class="filter-box">
+    <!-- Categorías -->
 
-        <label for="category">
-            Categoría
-        </label>
+    <div
+        class="d-flex flex-wrap justify-content-center gap-2 mb-5"
+    >
 
-        <select id="category">
+        <button
+            type="button"
+            class="btn btn-dark"
+            data-categoria="todos"
+        >
+            Todos
+        </button>
 
-            <option value="todos">
-                Todas
-            </option>
 
-            <option value="muebles">
-                Muebles
-            </option>
+        <button
+            type="button"
+            class="btn btn-outline-dark"
+            data-categoria="muebles"
+        >
+            🪑 Muebles
+        </button>
 
-            <option value="oficina">
-                Oficina
-            </option>
 
-            <option value="dormitorio">
-                Dormitorio
-            </option>
+        <button
+            type="button"
+            class="btn btn-outline-dark"
+            data-categoria="computacion"
+        >
+            💻 Computación
+        </button>
 
-            <option value="tecnologia">
-                Tecnología
-            </option>
 
-        </select>
+        <button
+            type="button"
+            class="btn btn-outline-dark"
+            data-categoria="hogar"
+        >
+            🏠 Hogar
+        </button>
+
+    </div>
+
+
+    <!-- Productos -->
+
+    <div class="row g-4">
+
+
+        <!-- Producto 1 -->
+
+        <article
+            class="col-12 col-sm-6 col-lg-4 producto"
+            data-categoria="muebles"
+        >
+
+            <div class="card h-100 shadow-sm">
+
+                <div
+                    class="producto-imagen d-flex align-items-center justify-content-center"
+                >
+
+                    <span aria-hidden="true">
+                        🪑
+                    </span>
+
+                </div>
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <span
+                        class="badge text-bg-secondary align-self-start mb-2"
+                    >
+                        Muebles
+                    </span>
+
+
+                    <h3 class="card-title h5">
+                        Silla Ergonómica
+                    </h3>
+
+
+                    <p class="card-text text-secondary">
+                        Silla ergonómica ideal para oficina,
+                        estudio o gaming.
+                    </p>
+
+
+                    <div class="mt-auto">
+
+                        <p class="fs-4 fw-bold mb-3">
+                            $85.000
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning w-100"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Producto 2 -->
+
+        <article
+            class="col-12 col-sm-6 col-lg-4 producto"
+            data-categoria="muebles"
+        >
+
+            <div class="card h-100 shadow-sm">
+
+                <div
+                    class="producto-imagen d-flex align-items-center justify-content-center"
+                >
+
+                    <span aria-hidden="true">
+                        🖥️
+                    </span>
+
+                </div>
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <span
+                        class="badge text-bg-secondary align-self-start mb-2"
+                    >
+                        Muebles
+                    </span>
+
+
+                    <h3 class="card-title h5">
+                        Escritorio Moderno
+                    </h3>
+
+
+                    <p class="card-text text-secondary">
+                        Escritorio amplio para estudiar,
+                        trabajar o disfrutar de tus juegos.
+                    </p>
+
+
+                    <div class="mt-auto">
+
+                        <p class="fs-4 fw-bold mb-3">
+                            $150.000
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning w-100"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Producto 3 -->
+
+        <article
+            class="col-12 col-sm-6 col-lg-4 producto"
+            data-categoria="computacion"
+        >
+
+            <div class="card h-100 shadow-sm">
+
+                <div
+                    class="producto-imagen d-flex align-items-center justify-content-center"
+                >
+
+                    <span aria-hidden="true">
+                        🖥️
+                    </span>
+
+                </div>
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <span
+                        class="badge text-bg-primary align-self-start mb-2"
+                    >
+                        Computación
+                    </span>
+
+
+                    <h3 class="card-title h5">
+                        Monitor 24"
+                    </h3>
+
+
+                    <p class="card-text text-secondary">
+                        Monitor Full HD ideal para trabajo,
+                        estudio y entretenimiento.
+                    </p>
+
+
+                    <div class="mt-auto">
+
+                        <p class="fs-4 fw-bold mb-3">
+                            $220.000
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning w-100"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Producto 4 -->
+
+        <article
+            class="col-12 col-sm-6 col-lg-4 producto"
+            data-categoria="computacion"
+        >
+
+            <div class="card h-100 shadow-sm">
+
+                <div
+                    class="producto-imagen d-flex align-items-center justify-content-center"
+                >
+
+                    <span aria-hidden="true">
+                        ⌨️
+                    </span>
+
+                </div>
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <span
+                        class="badge text-bg-primary align-self-start mb-2"
+                    >
+                        Computación
+                    </span>
+
+
+                    <h3 class="card-title h5">
+                        Teclado Mecánico
+                    </h3>
+
+
+                    <p class="card-text text-secondary">
+                        Teclado mecánico compacto con iluminación
+                        y diseño pensado para gaming.
+                    </p>
+
+
+                    <div class="mt-auto">
+
+                        <p class="fs-4 fw-bold mb-3">
+                            $45.000
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning w-100"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Producto 5 -->
+
+        <article
+            class="col-12 col-sm-6 col-lg-4 producto"
+            data-categoria="hogar"
+        >
+
+            <div class="card h-100 shadow-sm">
+
+                <div
+                    class="producto-imagen d-flex align-items-center justify-content-center"
+                >
+
+                    <span aria-hidden="true">
+                        💡
+                    </span>
+
+                </div>
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <span
+                        class="badge text-bg-success align-self-start mb-2"
+                    >
+                        Hogar
+                    </span>
+
+
+                    <h3 class="card-title h5">
+                        Lámpara Minimalista
+                    </h3>
+
+
+                    <p class="card-text text-secondary">
+                        Lámpara de diseño minimalista para
+                        darle personalidad a tus espacios.
+                    </p>
+
+
+                    <div class="mt-auto">
+
+                        <p class="fs-4 fw-bold mb-3">
+                            $35.000
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning w-100"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Producto 6 -->
+
+        <article
+            class="col-12 col-sm-6 col-lg-4 producto"
+            data-categoria="hogar"
+        >
+
+            <div class="card h-100 shadow-sm">
+
+                <div
+                    class="producto-imagen d-flex align-items-center justify-content-center"
+                >
+
+                    <span aria-hidden="true">
+                        🗄️
+                    </span>
+
+                </div>
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <span
+                        class="badge text-bg-success align-self-start mb-2"
+                    >
+                        Hogar
+                    </span>
+
+
+                    <h3 class="card-title h5">
+                        Organizador Modular
+                    </h3>
+
+
+                    <p class="card-text text-secondary">
+                        Solución práctica para organizar
+                        diferentes espacios del hogar.
+                    </p>
+
+
+                    <div class="mt-auto">
+
+                        <p class="fs-4 fw-bold mb-3">
+                            $60.000
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning w-100"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
 </div>
 
-        <div class="products-grid">
 
-
-            <!-- PRODUCTO 1 -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-                    🛋️
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Muebles
-                    </span>
-
-                    <h3>
-                        Sofá Moderno
-                    </h3>
-
-                    <p>
-                        Sofá de diseño moderno para living.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">
-                            $450.000
-                        </span>
-
-                        <a href="#carrito" class="product-btn">
-                            Comprar
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 2 -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-                    🪑
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Oficina
-                    </span>
-
-                    <h3>
-                        Silla Ergonómica
-                    </h3>
-
-                    <p>
-                        Comodidad para trabajar y estudiar.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">
-                            $180.000
-                        </span>
-
-                        <a href="#carrito" class="product-btn">
-                            Comprar
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 3 -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-                    🖥️
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Tecnología
-                    </span>
-
-                    <h3>
-                        Monitor Gamer
-                    </h3>
-
-                    <p>
-                        Monitor Full HD ideal para gaming.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">
-                            $320.000
-                        </span>
-
-                        <a href="#carrito" class="product-btn">
-                            Comprar
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 4 -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-                    🖥️
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Oficina
-                    </span>
-
-                    <h3>
-                        Escritorio Gamer
-                    </h3>
-
-                    <p>
-                        Escritorio amplio para PC y accesorios.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">
-                            $250.000
-                        </span>
-
-                        <a href="#carrito" class="product-btn">
-                            Comprar
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 5 -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-                    🛏️
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Dormitorio
-                    </span>
-
-                    <h3>
-                        Cama Moderna
-                    </h3>
-
-                    <p>
-                        Diseño moderno y estructura resistente.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">
-                            $380.000
-                        </span>
-
-                        <a href="#carrito" class="product-btn">
-                            Comprar
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 6 -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-                    ⌨️
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Tecnología
-                    </span>
-
-                    <h3>
-                        Teclado Mecánico
-                    </h3>
-
-                    <p>
-                        Teclado mecánico para gaming y trabajo.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">
-                            $85.000
-                        </span>
-
-                        <a href="#carrito" class="product-btn">
-                            Comprar
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
+</section>
 
 
     <!--  OFERTAS  -->

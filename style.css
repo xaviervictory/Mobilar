@@ -1202,3 +1202,50 @@ RESPONSIVE DESIGN
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* TP3 - PRODUCTOS */
+
+
+.productos-descripcion {
+    max-width: 650px;
+}
+
+
+.producto-imagen {
+    min-height: 220px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f9fa,
+            #e9ecef
+        );
+
+    font-size: 5rem;
+}
+
+
+.producto .card {
+    border: none;
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.producto .card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+.producto .btn-warning {
+    font-weight: 700;
+}
