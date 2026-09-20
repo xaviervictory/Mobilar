@@ -113,7 +113,8 @@ botonesCategoria.forEach(function (boton) {
         categoriaActual =
             boton.dataset.categoria;
 
-
+            
+            
         // Cambiar botón activo
 
         botonesCategoria.forEach(function (otroBoton) {
@@ -138,7 +139,10 @@ botonesCategoria.forEach(function (boton) {
 // CARRITO DE COMPRAS
 
 
-const carrito = [];
+let carrito =
+    JSON.parse(
+        localStorage.getItem("mobilarCarrito")
+    ) || [];
 
 
 const botonesAgregar =
@@ -166,7 +170,42 @@ const botonCarrito =
 
     botonesAgregar.forEach(function (boton) {
 
-    boton.addEventListener("click", function () {
+    boton.addEventListener("click", function () {   
+
+        const textoOriginal =
+            boton.innerHTML;
+
+
+        boton.innerHTML =
+            "✓ Agregado";
+
+
+        boton.classList.remove(
+            "btn-warning"
+        );
+
+
+        boton.classList.add(
+            "btn-success"
+        );
+
+
+        setTimeout(function () {
+
+            boton.innerHTML =
+                textoOriginal;
+
+
+            boton.classList.remove(
+                "btn-success"
+            );
+
+
+            boton.classList.add(
+                "btn-warning"
+            );
+
+        }, 1200);
 
         const producto =
             boton.closest(".producto");
@@ -213,7 +252,14 @@ const botonCarrito =
 
 });
 
+
+
 function actualizarCarrito() {
+
+    localStorage.setItem(
+    "mobilarCarrito",
+    JSON.stringify(carrito)
+);
 
     listaCarrito.innerHTML = "";
 
@@ -383,3 +429,238 @@ finalizarCompra.addEventListener("click", function () {
     actualizarCarrito();
 
 });
+
+
+// VALIDACIÓN DEL FORMULARIO DE CONTACTO
+
+
+const formularioContacto =
+    document.getElementById("formulario-contacto");
+
+
+const nombreInput =
+    document.getElementById("nombre");
+
+
+const emailInput =
+    document.getElementById("email");
+
+
+const asuntoInput =
+    document.getElementById("asunto");
+
+
+const mensajeInput =
+    document.getElementById("mensaje");
+
+
+const errorNombre =
+    document.getElementById("error-nombre");
+
+
+const errorEmail =
+    document.getElementById("error-email");
+
+
+const errorAsunto =
+    document.getElementById("error-asunto");
+
+
+const errorMensaje =
+    document.getElementById("error-mensaje");
+
+
+const mensajeExito =
+    document.getElementById("mensaje-exito");
+
+
+
+// EVENTO SUBMIT
+
+
+formularioContacto.addEventListener(
+    "submit",
+    function (evento) {
+
+        evento.preventDefault();
+
+
+        let formularioValido = true;
+
+
+        // VALIDAR NOMBRE
+       
+
+        const nombre =
+            nombreInput.value.trim();
+
+
+        if (nombre.length < 3) {
+
+            errorNombre.textContent =
+                "El nombre debe tener al menos 3 caracteres.";
+
+            nombreInput.classList.add("is-invalid");
+
+            nombreInput.classList.remove("is-valid");
+
+            formularioValido = false;
+
+        } else {
+
+            errorNombre.textContent = "";
+
+            nombreInput.classList.remove("is-invalid");
+
+            nombreInput.classList.add("is-valid");
+
+        }
+
+
+       
+        // VALIDAR EMAIL
+        
+
+        const email =
+            emailInput.value.trim();
+
+
+        const formatoEmail =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!formatoEmail.test(email)) {
+
+            errorEmail.textContent =
+                "Ingresá un correo electrónico válido.";
+
+            emailInput.classList.add("is-invalid");
+
+            emailInput.classList.remove("is-valid");
+
+            formularioValido = false;
+
+        } else {
+
+            errorEmail.textContent = "";
+
+            emailInput.classList.remove("is-invalid");
+
+            emailInput.classList.add("is-valid");
+
+        }
+
+
+       
+        // VALIDAR ASUNTO
+       
+
+        const asunto =
+            asuntoInput.value;
+
+
+        if (asunto === "") {
+
+            errorAsunto.textContent =
+                "Seleccioná un asunto.";
+
+            asuntoInput.classList.add("is-invalid");
+
+            asuntoInput.classList.remove("is-valid");
+
+            formularioValido = false;
+
+        } else {
+
+            errorAsunto.textContent = "";
+
+            asuntoInput.classList.remove("is-invalid");
+
+            asuntoInput.classList.add("is-valid");
+
+        }
+
+
+        
+        // VALIDAR MENSAJE
+     
+
+        const mensaje =
+            mensajeInput.value.trim();
+
+
+        if (mensaje.length < 10) {
+
+            errorMensaje.textContent =
+                "El mensaje debe tener al menos 10 caracteres.";
+
+            mensajeInput.classList.add("is-invalid");
+
+            mensajeInput.classList.remove("is-valid");
+
+            formularioValido = false;
+
+        } else {
+
+            errorMensaje.textContent = "";
+
+            mensajeInput.classList.remove("is-invalid");
+
+            mensajeInput.classList.add("is-valid");
+
+        }
+
+
+        
+        // RESULTADO
+       
+
+        if (formularioValido) {
+
+            mensajeExito.textContent =
+    "✅ ¡Mensaje enviado correctamente! " +
+    "Gracias por comunicarte con Mobilar.";
+
+
+            formularioContacto.reset();
+
+
+            nombreInput.classList.remove("is-valid");
+
+            emailInput.classList.remove("is-valid");
+
+            asuntoInput.classList.remove("is-valid");
+
+            mensajeInput.classList.remove("is-valid");
+
+
+            setTimeout(function () {
+
+                mensajeExito.classList.add("d-none");
+
+            }, 5000);
+
+        }
+
+    }
+);
+
+const contadorCaracteres =
+    document.getElementById(
+        "contador-caracteres"
+    );
+
+
+mensajeInput.addEventListener(
+    "input",
+    function () {
+
+        const cantidad =
+            mensajeInput.value.length;
+
+
+        contadorCaracteres.textContent =
+            `${cantidad} / 500`;
+
+    }
+);
