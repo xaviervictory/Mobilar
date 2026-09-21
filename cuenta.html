@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Mi cuenta | Mobilar"
+    >
+
+    <title>Mi cuenta | Mobilar</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/mobicon.png"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a
+                href="index.html"
+                class="navbar-brand fw-bold"
+            >
+                MOBILAR
+            </a>
+
+            <a
+                href="index.html"
+                class="btn btn-outline-light"
+            >
+                ← Volver
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MI CUENTA -->
+
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 col-lg-6">
+
+                <div class="card shadow">
+
+                    <div class="card-body p-4">
+
+
+                        <!-- ENCABEZADO -->
+
+                        <div class="text-center mb-4">
+
+                            <div
+                                class="fs-1 mb-2"
+                            >
+                                👤
+                            </div>
+
+                            <h1 class="h3 fw-bold">
+                                Mi cuenta
+                            </h1>
+
+                            <p
+                                class="text-secondary"
+                                id="saludo-usuario"
+                            >
+                                Cargando usuario...
+                            </p>
+
+                        </div>
+
+
+                        <!-- DATOS DEL USUARIO -->
+
+                        <div class="border rounded p-3 mb-4">
+
+                            <h2 class="h5 fw-bold mb-3">
+                                Datos de la cuenta
+                            </h2>
+
+                            <p class="mb-2">
+
+                                <strong>
+                                    Nombre:
+                                </strong>
+
+                                <span id="cuenta-nombre">
+                                    -
+                                </span>
+
+                            </p>
+
+                            <p class="mb-0">
+
+                                <strong>
+                                    Correo:
+                                </strong>
+
+                                <span id="cuenta-email">
+                                    -
+                                </span>
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- CARRITO -->
+
+                        <div class="border rounded p-3 mb-4">
+
+                            <h2 class="h5 fw-bold mb-3">
+                                🛒 Mi carrito
+                            </h2>
+
+                            <p class="mb-2">
+
+                                <strong>
+                                    Productos:
+                                </strong>
+
+                                <span id="cuenta-cantidad-carrito">
+                                    0
+                                </span>
+
+                            </p>
+
+                            <p class="mb-0">
+
+                                <strong>
+                                    Total:
+                                </strong>
+
+                                <span id="cuenta-total-carrito">
+                                    $0
+                                </span>
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- BOTONES -->
+
+                        <div class="d-grid gap-2">
+
+                            <a
+                                href="index.html"
+                                class="btn btn-warning"
+                            >
+                                🛒 Ver productos
+                            </a>
+
+                            <button
+                                type="button"
+                                id="cuenta-cerrar-sesion"
+                                class="btn btn-outline-danger"
+                            >
+                                🚪 Cerrar sesión
+                            </button>
+
+                        </div>
+
+
+                        <!-- MENSAJE -->
+
+                        <div
+                            id="mensaje-cuenta"
+                            class="alert d-none mt-4"
+                            role="alert"
+                        ></div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
