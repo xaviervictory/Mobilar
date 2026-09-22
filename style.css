@@ -7,7 +7,7 @@
 
 --color-primary: #1f2937;
 --color-primary-dark: #111827;
---color-secondary: #d97706;
+--color-secondary: #FFD700;
 --color-secondary-light: #f59e0b;
 
 --color-background: #f8f7f4;
@@ -1568,3 +1568,9 @@ RESPONSIVE DESIGN
 
 }
 
+.logo-mobilar {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 10px;
+}
