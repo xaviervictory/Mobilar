@@ -95,39 +95,56 @@ El catálogo de productos modifica la cantidad de columnas según el ancho dispo
 
 ---
 
-#  TP3 — Bootstrap
+## TP3 — Refactorización con Bootstrap
 
-En el tercer trabajo práctico se realizará una refactorización del proyecto utilizando Bootstrap.
+En el TP3 se refactorizó la interfaz desarrollada en el TP2
+utilizando Bootstrap 5.3.3.
 
-El CSS desarrollado durante el TP2 será conservado y comentado.
+Se utilizaron principalmente:
 
-Se incorporarán componentes de Bootstrap como:
+- Navbar
+- Container
+- Grid system
+- Cards
+- Buttons
+- Badges
+- Forms
+- Modal
+- Utilities de spacing
+- Utilities de flexbox
+- Responsive breakpoints
 
-* Navbar.
-* Cards.
-* Buttons.
-* Grid.
-* Modal.
-* Formulario.
+El objetivo fue reducir la cantidad de CSS personalizado y utilizar
+las herramientas proporcionadas por Bootstrap para estructura,
+responsive design y componentes visuales.
 
-Finalmente, el proyecto será publicado utilizando Netlify.
+El CSS personalizado se mantiene únicamente para elementos
+específicos de la identidad visual de Mobilar y componentes que
+requieren una personalización adicional.
 
 ---
 
-#  TP4 — JavaScript y DOM
+## TP4 — JavaScript y DOM
 
-En el cuarto trabajo práctico se incorporarán funcionalidades mediante JavaScript y manipulación del DOM.
+En el TP4 se incorporaron funcionalidades mediante JavaScript,
+manipulación del DOM y eventos.
 
-Entre las funcionalidades previstas:
+### Funcionalidades implementadas
 
-* Buscador de productos.
-* Filtros por categoría.
-* Ordenamiento.
-* Carrito de compras.
-* Agregar productos.
-* Eliminar productos.
-* Favoritos.
-* Eventos e interacción con el usuario.
+- Buscador de productos.
+- Filtros por categoría.
+- Carrito de compras.
+- Agregado de productos.
+- Eliminación de productos.
+- Persistencia mediante localStorage.
+- Validación de formularios.
+- Registro de usuarios.
+- Inicio de sesión.
+- Recordar usuario.
+- Gestión de sesión.
+- Página "Mi cuenta".
+- Cierre de sesión.
+- Actualización dinámica de elementos del Navbar.
 
 ---
 
@@ -145,3 +162,78 @@ dev/* feature/* refactor/*
 
 Las funcionalidades y refactorizaciones se desarrollan en ramas independientes y posteriormente se integran mediante PR
 
+## SEO — Estrategias implementadas
+
+Durante el desarrollo de Mobilar se aplicaron diferentes estrategias
+de SEO para mejorar la estructura, accesibilidad y comprensión del
+sitio por parte de los motores de búsqueda.
+
+### Meta etiquetas
+
+Se incorporaron las siguientes etiquetas en el documento HTML:
+
+- `title`: define el título de la página.
+- `meta description`: describe el contenido principal del sitio.
+- `meta keywords`: contiene palabras relacionadas con la temática
+  del proyecto.
+- `meta author`: identifica al autor del proyecto.
+- `meta robots`: permite indicar que la página puede ser indexada
+  y que sus enlaces pueden ser seguidos.
+
+### Estructura semántica
+
+Se utilizaron etiquetas HTML5 semánticas como:
+
+- `header`
+- `nav`
+- `main`
+- `section`
+- `article`
+- `footer`
+
+Esto permite organizar el contenido de manera estructurada.
+
+### Encabezados
+
+Se utilizó una jerarquía de encabezados mediante:
+
+- `h1` para el título principal.
+- `h2` para las diferentes secciones.
+- `h3` para contenidos secundarios, como los productos.
+
+### Imágenes
+
+Las imágenes utilizadas en el sitio poseen atributos `alt`
+descriptivos relacionados con el contenido de cada producto.
+
+Esto mejora la accesibilidad y permite que los motores de búsqueda
+comprendan el contenido de las imágenes.
+
+### URLs y navegación
+
+El sitio utiliza enlaces internos mediante identificadores de sección,
+permitiendo navegar entre:
+
+- Inicio
+- Categorías
+- Productos
+- Ofertas
+- Nosotros
+- Contacto
+
+### Contenido
+
+Los textos de las diferentes secciones utilizan palabras relacionadas
+con la temática del proyecto, como:
+
+- muebles
+- oficina
+- tecnología
+- computación
+- hogar
+- escritorios
+- sillas
+- productos
+
+Esto permite mantener coherencia entre el contenido y la temática
+principal de Mobilar.
